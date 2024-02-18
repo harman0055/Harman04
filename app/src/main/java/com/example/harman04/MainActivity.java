@@ -3,8 +3,10 @@ package com.example.harman04;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.Button;
 import android.util.Log;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
             // Handle the button click
             Intent nextPage = new Intent(MainActivity.this, Secondactivity.class);
             startActivity(nextPage);
+            Intent next = new Intent( nextPage);
+            next.putExtra("Age", "");
+            next.putExtra("Name", "");
+            next.putExtra("PostalCode", "");
+
         });
 
     }
